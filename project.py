@@ -175,7 +175,6 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_x, mouse_y = event.pos
 
-                # Проверка нажатия кнопки "Пуск"
                 if 10 <= mouse_x <= 90 and HEIGHT - 40 <= mouse_y <= HEIGHT - 10:
                     start_menu_open = not start_menu_open  
 
@@ -224,8 +223,8 @@ def main():
         draw_image_button(button2_image, button2_rect)
         draw_image_button(button3_image, button3_rect)
 
-        pygame.draw.rect(screen, GRAY, (0, HEIGHT - 40, WIDTH, 40))  # Нижняя панель
-        pygame.draw.rect(screen, BLACK, (10, HEIGHT - 40, 80, 30))  # Кнопка "Пуск"
+        pygame.draw.rect(screen, GRAY, (0, HEIGHT - 40, WIDTH, 40))
+        pygame.draw.rect(screen, BLACK, (10, HEIGHT - 40, 80, 30)) 
         draw_text_button("Пуск", 10, HEIGHT - 40, 80, 30, color=WHITE)
         
         if start_menu_open:
